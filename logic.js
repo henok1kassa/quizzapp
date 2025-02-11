@@ -45,6 +45,8 @@ function progressBarHandler(){
 }
 progressBarHandler()
 
+//  added more code!
+
 // next question handler:
 const myBtn = document.getElementById('myBtn');
 function clickToNextQuestion() {
