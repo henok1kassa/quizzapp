@@ -107,7 +107,7 @@ function timer() {
         if(!timerStart) return 
         timerStart -= 1
         timeBar.textContent = `${timerStart}`
-    }, 1000)
+    }, 100)
 
 }
 timer()
