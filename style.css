@@ -50,14 +50,17 @@ body{
     justify-content: center;
     align-items: center;
 }
-.question{
+#question{
     width: 90%;
     height: 20vh;
     border: 1px solid black;
-    position: relative;
-    left: 5%;
-    bottom: 2%;
-    border-radius: 20px;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin-left: 15px;
 }
 .options{
     width: 90%;
@@ -70,6 +73,10 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+}
+.options>button{
+    justify-content: space-between;
+    padding: 1rem;
 }
 .op1{ 
     width: 95%;
@@ -88,7 +95,7 @@ body{
 .active>.mark{
     background-color:  rgba(222, 222, 222, 0.866);
 }
-.text1{
+#text1{
     font-weight: bold;
     font-size: 20px;
     color: rgb(0, 70, 67);
@@ -98,8 +105,8 @@ body{
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    position: relative;
-    left: 70%;
+    /* position: relative;
+    left: 70%; */
 }
 .op2{ 
     width: 95%;
@@ -110,19 +117,19 @@ body{
     border: none;
 }
 
-.text2{
+#text2{
     font-weight: bold;
     font-size: 20px;
     color: rgb(0, 70, 67);
 }
-.mark{
+/* .mark{
     border: 1px solid rgb(0, 70, 67);
     border-radius: 50%;
     width: 20px;
     height: 20px;
     position: relative;
     left: 70%;
-}
+} */
 
 /*.op2:active {
     background-color: rgb(3, 73, 70);
@@ -137,19 +144,19 @@ body{
     align-items: center;
     border: none;
 }
-.text3{
+#text3{
     font-weight: bold;
     font-size: 20px;
     color: rgb(0, 70, 67);
 }
-.mark{
+/* .mark{
     border: 1px solid rgb(0, 70, 67);
     border-radius: 50%;
     width: 20px;
     height: 20px;
     position: relative;
     left: 70%;
-}
+} */
 .op4{ 
     width: 95%;
     height: 5vh;
@@ -158,19 +165,19 @@ body{
     align-items: center;
     border: none;
 }
-.text4{
+#text4{
     font-weight: bold;
     font-size: 20px;
     color: rgb(0, 70, 67);
 }
-.mark{
+/* .mark{
     border: 1px solid rgb(0, 70, 67);
     border-radius: 50%;
     width: 20px;
     height: 20px;
     position: relative;
     left: 70%;
-}
+} */
 #myBtn{
     width: 90%;
     height: 5.5vh;
