@@ -78,8 +78,8 @@ function progressBarHandler() {
   const progressBar = document.getElementById("score");
   progressBar.textContent = `${indexQuestion + 1} / ${QUESTIONS.length}`;
   if (indexQuestion === QUESTIONS.length) {
-    localStorage.setItem("userAnswer", userAnswer);
-    window.location.href = "/finalPage.html";
+    localStorage.setItem("userAnswers", userAnswer);
+    window.location.href = "/pages/finalPage.html";
   }
 }
 progressBarHandler();

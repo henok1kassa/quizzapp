@@ -104,6 +104,7 @@ body{
     border-radius: 20px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .no5{
     width: 94%;
