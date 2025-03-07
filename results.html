@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+    <link rel="stylesheet" href="results.styles.css" />
+  </head>
+  <body>
+    <div class="results-container">
+      <div class="header">
+        <h1>Your Quiz Results</h1>
+        <div id="score-details">
+          <p id="score"></p>
+          <p id="correct-answers"></p>
+          <p id="message"></p>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <script>
+      // This will be run on the results page
+      window.onload = function () {
+        // Get stored answers and compare with correct answers
+        const userAnswers =
+          JSON.parse(localStorage.getItem("userAnswers")) ?? [];
+        console.log(userAnswers);
+        const correctAnswers = [
+          "God",
+          "Genesis",
+          "Noah",
+          "Moses",
+          "Mary",
+          "12",
+          "Wine",
+          "'Jesus wept.'",
+          "Judas Iscariot",
+          "He rose from the dead",
+        ];
+
+        let correctCount = 0;
+        userAnswers.forEach((answer, index) => {
+          if (answer === correctAnswers[index]) {
+            correctCount++;
+          }
+        });
+
+        const totalQuestions = correctAnswers.length;
+        const scoreText = `You answered ${correctCount} out of ${totalQuestions} questions correctly.`;
+        const messageText =
+          correctCount === totalQuestions
+            ? "Well done!"
+            : "Try again next time!";
+
+        document.getElementById("score").textContent = scoreText;
+        document.getElementById(
+          "correct-answers"
+        ).textContent = `Correct Answers: ${correctCount}`;
+        document.getElementById("message").textContent = messageText;
+      };
+    </script>
+  </body>
+</html>
