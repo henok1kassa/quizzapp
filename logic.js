@@ -1,10 +1,7 @@
 let indexQuestion = 0; // Current index of question we are on
 // let timer = 0;  // A clock that goes up by 1 every second
 let timeLastSubmit = 0;  // the time we last submitted an answer
-let timeExpired = false;  // Did time expire for current question?
 
-// number of seconds to wait for each question
-let WAIT_TIME = 30;
 
 // all questions to be used on the website
 let QUESTIONS = [
@@ -61,6 +58,7 @@ let QUESTIONS = [
 ];
 
 // progressbar:
+
 function progressBarHandler() {
     const progressBar = document.getElementById('score')
     progressBar.textContent = `${indexQuestion + 1 } / ${QUESTIONS.length}`
@@ -81,6 +79,7 @@ function clickToNextQuestion() {
     }
     indexQuestion += 1 
     progressBarHandler()
+    resetTimer()
 }
 myBtn.addEventListener('click', clickToNextQuestion);
 
@@ -96,6 +95,7 @@ const questionElement = document.getElementById("question");
 
 let isButtonClicked = false
 let lastAnswer = null
+
 // Function to show the current question
 function showQuestion() {
     questionElement.textContent = QUESTIONS[indexQuestion].question;
@@ -107,6 +107,7 @@ function showQuestion() {
         showOptionsContainer.append(answer)
         answer.addEventListener('click', () => buttonColorChange(`.op${i + 1}`))
     })
+
 }
 
 // creating new elements for the answers:
@@ -155,19 +156,34 @@ function resetPrevAnswer() {
 // timer
 let timeBar = document.querySelector(".seconds")
 
+let timeExpired = false;
 let timerStart = 30
 let intervalID = null
 function timer() {
     if (timerStart <= 0) {
+       
+        showQuestion()
         clearInterval(intervalID)
         return
     }
    
     intervalID = setInterval(() => {
-        if(!timerStart) return 
+        if(!timerStart) {
+            timerStart  = 30
+            indexQuestion += 1 
+            showQuestion() 
+            return
+        }
         timerStart -= 1
         timeBar.textContent = `${timerStart}`
     }, 1000)
-
+  
 }
 timer()
+
+function resetTimer() {
+    clearInterval(intervalID); 
+    timerStart = 30; 
+    timeBar.textContent = `${timerStart}`; 
+    timer(); 
+}
