@@ -85,7 +85,7 @@ function progressBarHandler() {
 }
 
 document.getElementById("previous").addEventListener("click", () => {
-  window.location.href = "/pages/login.html";
+  window.location.href = "/";
 });
 progressBarHandler();
 

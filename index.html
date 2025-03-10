@@ -1,49 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./Styles/style.css" />
+    <title>מסך כניסה</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        direction: rtl;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e5e5e5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .login-container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: 26px;
+        font-weight: bold;
+        color: #004d40;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background-color: #004d40;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #00332b;
+      }
+
+      @media (max-width: 480px) {
+        .login-container {
+          padding: 15px;
+        }
+
+        h1 {
+          font-size: 22px;
+        }
+
+        input,
+        button {
+          font-size: 16px;
+          padding: 10px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- the navigation -->
-
-    <div class="nav">
-      <button class="previous" id="previous">< prev</button>
-      <div id="score"></div>
-    </div>
-    <!-- the question -->
-
-    <div class="main">
-      <div class="seconds">30</div>
-      <div id="question"></div>
+    <div class="login-container">
+      <h1>בליבי צפנתי אמרתך</h1>
+      <input type="text" placeholder="הזן שם משתמש" id="input" />
+      <button onclick="enterQuiz()">התחל</button>
     </div>
 
-    <!-- the options we have to choose -->
-    <div class="options">
-      <!-- <button class="op1">
-            <div id="text1">1986</div>
-            <div class="mark"></div>
-        </button>
-    
-        <button class="op2">
-            <div id="text2">1994</div>
-            <div class="mark"></div>
-        </button>
-        <button class="op3">
-            <div id="text3">2002</div>
-            <div class="mark"></div>
-        </button>
-        <button class="op4">
-            <div id="text4">2010</div>
-            <div class="mark"></div>
-        </button> -->
-    </div>
-    <!-- the next button -->
-
-    <button id="myBtn">NEXT</button>
-
-    <script src="./JS/logic.js"></script>
+    <script>
+      function enterQuiz() {
+        const inputEl = document.getElementById("input");
+        if (!inputEl.value) {
+          alert("אנא הזן שם משתמש");
+          return;
+        }
+        window.location.href = "/pages/home.html"; // שנה לקישור המתאים
+      }
+    </script>
   </body>
 </html>
