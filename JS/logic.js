@@ -83,6 +83,10 @@ function progressBarHandler() {
     window.location.href = "/pages/results.html";
   }
 }
+
+document.getElementById("previous").addEventListener("click", () => {
+  window.location.href = "/pages/login.html";
+});
 progressBarHandler();
 
 let isButtonClicked = false;
