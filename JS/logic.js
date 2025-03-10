@@ -80,7 +80,7 @@ function progressBarHandler() {
   if (indexQuestion === QUESTIONS.length) {
     localStorage.setItem("userAnswers", userAnswer);
     // window.location.href = "/pages/finalPage.html";
-    window.location.href = "/pages/results.html";
+    window.location.href = "/pages/spinner.html";
   }
 }
 
