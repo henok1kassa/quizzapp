@@ -79,7 +79,8 @@ function progressBarHandler() {
   progressBar.textContent = `${indexQuestion + 1} / ${QUESTIONS.length}`;
   if (indexQuestion === QUESTIONS.length) {
     localStorage.setItem("userAnswers", userAnswer);
-    window.location.href = "/pages/finalPage.html";
+    // window.location.href = "/pages/finalPage.html";
+    window.location.href = "/pages/results.html";
   }
 }
 progressBarHandler();
