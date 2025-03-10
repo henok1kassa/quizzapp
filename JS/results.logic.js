@@ -94,7 +94,8 @@ document.getElementById(
 ).textContent = `Correct Answers: ${correctCount}`;
 document.getElementById("message").textContent = messageText;
 document.getElementById("back").addEventListener("click", () => {
-  window.history.back();
+  window.location.href = "/pages/home.html"; 
+
 });
 const showOptionsContainer = document.querySelector(".wrapper");
 
