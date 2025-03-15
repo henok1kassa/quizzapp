@@ -90,15 +90,17 @@
       <input type="text" placeholder="הזן שם משתמש" id="input" />
       <button onclick="enterQuiz()">התחל</button>
     </div>
-
+    <script src="./JS/uploadQuestions.js"></script>
     <script>
       function enterQuiz() {
         const inputEl = document.getElementById("input");
         if (!inputEl.value) {
-          alert("אנא הזן שם משתמש");
+          alert("אנא הזן שם משתמש או מספר טלפון");
           return;
         }
-        window.location.href = "/pages/home.html"; 
+
+        localStorage.setItem("user", JSON.stringify(inputEl.value));
+        window.location.href = "/pages/home.html";
       }
     </script>
   </body>

@@ -3,68 +3,14 @@ let indexQuestion = 0; // Current index of question we are on
 let timeLastSubmit = 0; // the time we last submitted an answer
 
 // all questions to be used on the website
-let QUESTIONS = [
-  {
-    question: "Who created the heavens and the earth?",
-    choices: ["Moses", "Paul", "God", "Peter"],
-    answer: 3,
-  },
-  {
-    question: "What is the first book of the Bible?",
-    choices: ["Psalms", "Genesis", "Matthew", "Revelation"],
-    answer: 2,
-  },
-  {
-    question: "Who built the ark to survive the flood?",
-    choices: ["Abraham", "Noah", "David", "Solomon"],
-    answer: 2,
-  },
-  {
-    question: "Who led the Israelites out of Egypt?",
-    choices: ["Joshua", "Elijah", "Moses", "Aaron"],
-    answer: 3,
-  },
-  {
-    question: "What is the name of Jesus's mother?",
-    choices: ["Elizabeth", "Sarah", "Mary", "Martha"],
-    answer: 3,
-  },
-  {
-    question: "How many disciples did Jesus have?",
-    choices: ["10", "12", "7", "15"],
-    answer: 2,
-  },
-  {
-    question: "What did Jesus turn water into at a wedding in Cana?",
-    choices: ["Milk", "Oil", "Wine", "Honey"],
-    answer: 3,
-  },
-  {
-    question: "What is the shortest verse in the Bible?",
-    choices: [
-      "'Jesus wept.'",
-      "'God is love.'",
-      "'The Lord is my shepherd.'",
-      "'Rejoice always.'",
-    ],
-    answer: 1,
-  },
-  {
-    question: "Who betrayed Jesus for 30 pieces of silver?",
-    choices: ["Judas Iscariot", "Peter", "John", "Thomas"],
-    answer: 1,
-  },
-  {
-    question: "What happened on the third day after Jesus was crucified?",
-    choices: [
-      "He remained in the tomb",
-      "He ascended to heaven",
-      "He rose from the dead",
-      "His body was stolen",
-    ],
-    answer: 3,
-  },
-];
+
+const s2sUsers = ["0539430984"];
+const currentUser = localStorage.getItem("user");
+let QUESTIONS = s2sUsers.includes(JSON.parse(currentUser))
+  ? JSON.parse(localStorage.getItem("s2sQuestions"))
+  : JSON.parse(localStorage.getItem("basicQuestions"));
+
+console.log({ QUESTIONS });
 let userAnswer = [];
 
 let timeBar = document.querySelector(".seconds");
