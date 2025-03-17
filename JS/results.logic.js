@@ -4,7 +4,7 @@ const isS2SUser = s2sUsers.includes(JSON.parse(currentUser));
 let QUESTIONS = [];
 
 if (isS2SUser) {
-  QUESTIONS = JSON.parse(localStorage.getItem("s2sQuestions"));
+  QUESTIONS = JSON.parse(localStorage.getItem("interview"));
 } else {
   QUESTIONS = JSON.parse(localStorage.getItem("basicQuestions"));
 }

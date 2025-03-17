@@ -419,5 +419,163 @@ const s2sQuestions = [
   },
 ];
 
+const frontendInterviewQuestions = [
+  {
+    question: "What is the difference between `==` and `===` in JavaScript?",
+    choices: [
+      "No difference",
+      "Type coercion vs. strict equality",
+      "Scope differences",
+      "Memory allocation differences",
+    ],
+    answer: 2,
+  },
+  {
+    question: "What is the purpose of the `useEffect` hook in React?",
+    choices: [
+      "Managing state",
+      "Handling events",
+      "Performing side effects",
+      "Rendering components",
+    ],
+    answer: 3,
+  },
+  {
+    question:
+      "What is the difference between `let`, `const`, and `var` in JavaScript?",
+    choices: [
+      "No difference",
+      "Scope and reassignment differences",
+      "Performance differences",
+      "Syntax differences",
+    ],
+    answer: 2,
+  },
+  {
+    question:
+      "What is the purpose of the `map()` function in JavaScript arrays?",
+    choices: [
+      "Filtering elements",
+      "Reducing elements",
+      "Iterating elements",
+      "Transforming elements",
+    ],
+    answer: 4,
+  },
+  {
+    question: "What is the DOM in web development?",
+    choices: [
+      "Document Object Model",
+      "Data Object Model",
+      "Design Object Model",
+      "Dynamic Object Model",
+    ],
+    answer: 1,
+  },
+  {
+    question: "What is the purpose of `async/await` in JavaScript?",
+    choices: [
+      "Synchronous code execution",
+      "Handling promises asynchronously",
+      "Declaring variables",
+      "Defining functions",
+    ],
+    answer: 2,
+  },
+  {
+    question:
+      "What is the difference between `null` and `undefined` in JavaScript?",
+    choices: [
+      "No difference",
+      "Value vs. absence of value",
+      "Type differences",
+      "Memory differences",
+    ],
+    answer: 2,
+  },
+  {
+    question: "What is the purpose of the `useState` hook in React?",
+    choices: [
+      "Managing side effects",
+      "Managing state within functional components",
+      "Handling events",
+      "Rendering components",
+    ],
+    answer: 2,
+  },
+  {
+    question: "What is the purpose of CSS Flexbox?",
+    choices: [
+      "Styling text",
+      "Creating responsive layouts",
+      "Handling events",
+      "Animating elements",
+    ],
+    answer: 2,
+  },
+  {
+    question:
+      "What is the purpose of the `reduce()` function in JavaScript arrays?",
+    choices: [
+      "Filtering elements",
+      "Transforming elements",
+      "Reducing elements to a single value",
+      "Iterating elements",
+    ],
+    answer: 3,
+  },
+  {
+    question: "What is a closure in JavaScript?",
+    choices: [
+      "A way to close browser tabs",
+      "A combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).",
+      "A type of loop",
+      "A way to handle errors",
+    ],
+    answer: 2,
+  },
+  {
+    question: "What is event bubbling in the DOM?",
+    choices: [
+      "An error handling technique",
+      "The propagation of events from the target element to its ancestors",
+      "A way to style elements",
+      "A method for creating animations",
+    ],
+    answer: 2,
+  },
+  {
+    question: "What is the purpose of a virtual DOM in React?",
+    choices: [
+      "To improve performance by minimizing direct DOM manipulation",
+      "To handle server-side rendering",
+      "To create animations",
+      "To manage state",
+    ],
+    answer: 1,
+  },
+  {
+    question: "What is the purpose of `localStorage` in web browsers?",
+    choices: [
+      "Storing session data",
+      "Storing persistent data in the browser",
+      "Handling cookies",
+      "Managing server-side data",
+    ],
+    answer: 2,
+  },
+  {
+    question: "What is the purpose of a promise in JavaScript?",
+    choices: [
+      "To handle synchronous operations",
+      "To handle asynchronous operations and their eventual completion or failure",
+      "To declare variables",
+      "To define functions",
+    ],
+    answer: 2,
+  },
+];
+
 localStorage.setItem("s2sQuestions", JSON.stringify(s2sQuestions));
 localStorage.setItem("basicQuestions", JSON.stringify(basicQuestions));
+localStorage.setItem("interview", JSON.stringify(frontendInterviewQuestions));

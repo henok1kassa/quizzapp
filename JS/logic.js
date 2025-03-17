@@ -7,7 +7,7 @@ let timeLastSubmit = 0; // the time we last submitted an answer
 const s2sUsers = ["0539430984"];
 const currentUser = localStorage.getItem("user");
 let QUESTIONS = s2sUsers.includes(JSON.parse(currentUser))
-  ? JSON.parse(localStorage.getItem("s2sQuestions"))
+  ? JSON.parse(localStorage.getItem("interview"))
   : JSON.parse(localStorage.getItem("basicQuestions"));
 
 console.log({ QUESTIONS });
